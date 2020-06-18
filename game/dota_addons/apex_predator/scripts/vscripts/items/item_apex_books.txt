@@ -12,8 +12,7 @@
 		"ID"							"1280"
 		"BaseClass"						"item_lua"
 		"ScriptFile"					"items/item_apex_strength_lua"
-		"Model"							"models/gameplay/attrib_tome_str.vmdl"
-		"AbilityTextureName"			"item_book_of_strength"
+		"AbilityTextureName"			"book_of_strength"
         "precache"
 		{
 			"soundfile"	"soundevents/game_sounds_items.vsndevts"
@@ -48,8 +47,7 @@
 		"ID"							"1281"
 		"BaseClass"						"item_lua"
 		"ScriptFile"					"items/item_apex_agility_lua"
-		"Model"							"models/gameplay/attrib_tome_agi.vmdl"
-		"AbilityTextureName"			"item_book_of_agility"
+		"AbilityTextureName"			"book_of_agility"
         "precache"
 		{
 			"soundfile"	"soundevents/game_sounds_items.vsndevts"
@@ -84,8 +82,7 @@
 		"ID"							"1282"
 		"BaseClass"						"item_lua"
 		"ScriptFile"					"items/item_apex_intelligence_lua"
-		"Model"							"models/gameplay/attrib_tome_int.vmdl"
-		"AbilityTextureName"			"item_book_of_intelligence"
+		"AbilityTextureName"			"book_of_intelligence"
         "precache"
 		{
 			"soundfile"	"soundevents/game_sounds_items.vsndevts"
