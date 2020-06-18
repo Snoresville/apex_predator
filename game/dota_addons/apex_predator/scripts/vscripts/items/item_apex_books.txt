@@ -1,0 +1,110 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Strength Apex
+	//=================================================================================================================
+	"item_apex_strength_lua"
+	{
+		// Ability Technical Aspect
+		// base script folder	: scripts/vscripts
+		// base texture folder	: resource/flash3/images/spellicons
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1280"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_apex_strength_lua"
+		"Model"							"models/gameplay/attrib_tome_str.vmdl"
+		"AbilityTextureName"			"item_book_of_strength"
+        "precache"
+		{
+			"soundfile"	"soundevents/game_sounds_items.vsndevts"
+		}
+
+		"ItemCost"						"50000"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+        "ItemStackable"					"1"
+        "ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+        "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	}
+	
+	//=================================================================================================================
+	// Agility Apex
+	//=================================================================================================================
+	"item_apex_agility_lua"
+	{
+		// Ability Technical Aspect
+		// base script folder	: scripts/vscripts
+		// base texture folder	: resource/flash3/images/spellicons
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1281"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_apex_agility_lua"
+		"Model"							"models/gameplay/attrib_tome_agi.vmdl"
+		"AbilityTextureName"			"item_book_of_agility"
+        "precache"
+		{
+			"soundfile"	"soundevents/game_sounds_items.vsndevts"
+		}
+
+		"ItemCost"						"50000"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+        "ItemStackable"					"1"
+        "ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+        "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	}
+	
+	//=================================================================================================================
+	// Intelligence Apex
+	//=================================================================================================================
+	"item_apex_intelligence_lua"
+	{
+		// Ability Technical Aspect
+		// base script folder	: scripts/vscripts
+		// base texture folder	: resource/flash3/images/spellicons
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1282"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_apex_intelligence_lua"
+		"Model"							"models/gameplay/attrib_tome_int.vmdl"
+		"AbilityTextureName"			"item_book_of_intelligence"
+        "precache"
+		{
+			"soundfile"	"soundevents/game_sounds_items.vsndevts"
+		}
+
+		"ItemCost"						"50000"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+        "ItemStackable"					"1"
+        "ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+        "ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	}
+}

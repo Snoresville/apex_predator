@@ -57,3 +57,5 @@
         }
     }
 }
+
+#base "../vscripts/items/item_apex_books.txt"
