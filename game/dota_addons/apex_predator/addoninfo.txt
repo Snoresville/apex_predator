@@ -2,4 +2,13 @@
 {
 	"maps" "dota"
 	EnablePickRules = 1
+	
+	"dota"
+	{
+					"MaxPlayers"                    "10"
+	}
+	"dota_10v10"
+	{
+					"MaxPlayers"                    "20"
+	}
 }
