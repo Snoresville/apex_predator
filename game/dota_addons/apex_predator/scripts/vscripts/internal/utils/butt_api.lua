@@ -273,6 +273,12 @@ function CDOTA_BaseNPC:AddNewModifierButt(caster, optionalSourceAbility, modifie
 	if pcall(require,file) then
 		LinkLuaModifier(modifierName, file, LUA_MODIFIER_MOTION_NONE)
 	end
+	-- Checks primary attributes to add at beginning of game
+	if modifierName == "apex_strength" and caster:GetPrimaryAttribute() ~= 0 then return end
+	if modifierName == "apex_agility" and caster:GetPrimaryAttribute() ~= 1 then return end
+	if modifierName == "apex_intelligence" and caster:GetPrimaryAttribute() ~= 2 then return end
+	print(modifierName)
+	
 	self:AddNewModifier(caster, optionalSourceAbility, modifierName, modifierData)
 end
 

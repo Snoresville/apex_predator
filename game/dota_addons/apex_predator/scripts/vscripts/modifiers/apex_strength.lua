@@ -41,7 +41,7 @@ end
 -- with %dMODIFIER_PROPERTY_TOOLTIP%
 function apex_strength:OnTooltip(event)
 	local percentage = self:GetStackCount() * 10
-	return percentage .. "%"
+	return percentage
 end
 
 function apex_strength:OnDeath(event)

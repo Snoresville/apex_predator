@@ -41,7 +41,7 @@ end
 -- with %dMODIFIER_PROPERTY_TOOLTIP%
 function apex_intelligence:OnTooltip(event)
 	local percentage = self:GetStackCount() * 10
-	return percentage .. "%"
+	return percentage
 end
 
 function apex_intelligence:OnDeath(event)
