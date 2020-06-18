@@ -56,9 +56,10 @@ function apex_strength:OnDeath(event)
 		--]]
 		
 		-- Test for hero kills
-		if event.unit:IsRealHero() then self:SetStackCount(self:GetStackCount() + 10) 
+		if event.unit:IsRealHero() or event.unit:IsBuilding() or event.unit:GetUnitName() == "npc_dota_roshan" then self:SetStackCount(self:GetStackCount() + 10) 
 		else self:SetStackCount(self:GetStackCount() + 1) 
 		end
+		self:GetParent():CalculateStatBonus()
 	end
 	--if event.unit~=self:GetParent() then return end -- only affect the own hero
 	-- space for some fancy stuff
