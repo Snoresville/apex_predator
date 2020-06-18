@@ -48,13 +48,17 @@ function apex_strength:OnDeath(event)
 	--for k,v in pairs(event) do print("OnDeath",k,v) end -- find out what event.__ to use
 	if IsClient() then return end
 	
-	print("Attacker", event.attacker:GetUnitName())
-	print("Unit", event.unity:GetUnitName())
-	
 	if event.attacker == self:GetParent() then 
+		--[[ Console Tests
+		print("Killer", event.attacker:GetUnitName())
+		print("Parent", self:GetParent():GetUnitName())
+		print("Unit that triggered event", event.unit:GetUnitName())
+		--]]
+		
 		-- Test for hero kills
-		if event.unit:IsRealHero() then self:SetStackCount(self:GetStackCount() + 10) end
-		else self:SetStackCount(self:GetStackCount() + 1)
+		if event.unit:IsRealHero() then self:SetStackCount(self:GetStackCount() + 10) 
+		else self:SetStackCount(self:GetStackCount() + 1) 
+		end
 	end
 	--if event.unit~=self:GetParent() then return end -- only affect the own hero
 	-- space for some fancy stuff
