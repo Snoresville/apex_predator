@@ -51,7 +51,7 @@ function apex_intelligence:OnDeath(event)
 	--for k,v in pairs(event) do print("OnDeath",k,v) end -- find out what event.__ to use
 	if IsClient() then return end
 	
-	if event.attacker == self:GetParent() then 
+	if event.attacker:GetPlayerOwnerID() == self:GetParent():GetPlayerOwnerID() then 
 		--[[ Console Tests
 		print("Killer", event.attacker:GetUnitName())
 		print("Parent", self:GetParent():GetUnitName())
