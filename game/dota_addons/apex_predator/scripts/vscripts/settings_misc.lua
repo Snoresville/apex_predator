@@ -28,7 +28,7 @@ ListenToGameEvent("created_game_mode_entity",function()
 	gameModeEnt:SetFountainPercentageManaRegen( -1 )			-- Set the percentage rate that the fountain will regen mana. (-1 for default) 
 	gameModeEnt:SetGoldSoundDisabled( false )					-- Turn the sound when gold is acquired off/on.
 	gameModeEnt:SetLoseGoldOnDeath( true )						-- Use to disable gold loss on death. 
-	gameModeEnt:SetMaximumAttackSpeed( 700 )					-- Set the maximum attack speed for units. 
+	gameModeEnt:SetMaximumAttackSpeed( 1000 )					-- Set the maximum attack speed for units. 
 	gameModeEnt:SetMinimumAttackSpeed( 20 )						-- Set the minimum attack speed for units. 
 	gameModeEnt:SetPauseEnabled( true )							-- Allow/Disallow players to pause the game. 
 	gameModeEnt:SetRecommendedItemsDisabled( false )			-- Turn the panel for showing recommended items at the shop off/on.

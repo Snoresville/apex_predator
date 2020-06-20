@@ -10,8 +10,11 @@ local bonusabilities = {
 	-- roshan_spell_block = { lvl = 4, nokey = true },
 }
 local bonusmodifier = {
+	apex_strength_base = {},
 	apex_strength = {},
+	apex_agility_base = {},
 	apex_agility = {},
+	apex_intelligence_base = {},
 	apex_intelligence = {},
 	-- examplemodifier = {},
 }

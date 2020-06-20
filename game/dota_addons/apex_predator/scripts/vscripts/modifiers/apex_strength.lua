@@ -23,6 +23,7 @@ function apex_strength:DeclareFunctions()
 		MODIFIER_EVENT_ON_DEATH, -- OnDeath
 		MODIFIER_PROPERTY_TOOLTIP, -- OnTooltip
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS, -- Stat Bonus
+		MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS
 		-- https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools/Scripting/API#modifierfunction
 	}
 	return funcs
@@ -30,12 +31,14 @@ end
 
 -- Stat Gain
 function apex_strength:GetModifierBonusStats_Strength()
-	local attribute = self:GetParent():GetBaseStrength()
+	local attribute = self:GetParent():GetModifierStackCount("apex_strength_base", self:GetParent()) or 0
 	local bonus = self:GetStackCount() * 0.1
 	return attribute * bonus
 end
 
-
+function apex_strength:GetModifierMagicalResistanceBonus()
+	return math.min(self:GetModifierBonusStats_Strength() * 0.08 or 0, 99.99)
+end
 
 -- passing a number to the Tooltip in resource/addon_english.txt 
 -- with %dMODIFIER_PROPERTY_TOOLTIP%

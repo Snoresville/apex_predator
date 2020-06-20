@@ -23,6 +23,7 @@ function apex_intelligence:DeclareFunctions()
 		MODIFIER_EVENT_ON_DEATH, -- OnDeath
 		MODIFIER_PROPERTY_TOOLTIP, -- OnTooltip
 		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS, -- Stat Bonus
+		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE
 		-- https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools/Scripting/API#modifierfunction
 	}
 	return funcs
@@ -30,12 +31,14 @@ end
 
 -- Stat Gain
 function apex_intelligence:GetModifierBonusStats_Intellect()
-	local attribute = self:GetParent():GetBaseIntellect()
+	local attribute = self:GetParent():GetModifierStackCount("apex_intelligence_base", self:GetParent()) or 0
 	local bonus = self:GetStackCount() * 0.1
 	return attribute * bonus
 end
 
-
+function apex_intelligence:GetModifierSpellAmplify_Percentage()
+	return self:GetModifierBonusStats_Intellect() * 0.1
+end
 
 -- passing a number to the Tooltip in resource/addon_english.txt 
 -- with %dMODIFIER_PROPERTY_TOOLTIP%

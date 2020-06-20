@@ -23,6 +23,7 @@ function apex_agility:DeclareFunctions()
 		MODIFIER_EVENT_ON_DEATH, -- OnDeath
 		MODIFIER_PROPERTY_TOOLTIP, -- OnTooltip
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS, -- Stat Bonus
+		
 		-- https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools/Scripting/API#modifierfunction
 	}
 	return funcs
@@ -30,7 +31,7 @@ end
 
 -- Stat Gain
 function apex_agility:GetModifierBonusStats_Agility()
-	local attribute = self:GetParent():GetBaseAgility()
+	local attribute = self:GetParent():GetModifierStackCount("apex_agility_base", self:GetParent()) or 0
 	local bonus = self:GetStackCount() * 0.1
 	return attribute * bonus
 end
