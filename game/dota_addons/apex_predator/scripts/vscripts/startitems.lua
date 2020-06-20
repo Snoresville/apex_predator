@@ -30,7 +30,7 @@ ListenToGameEvent("npc_first_spawn",function(kv)
 	local hero = EntIndexToHScript(kv.entindex)
 
 
-	if (not hero:IsHero()) then return end
+	if (not hero:IsHero() or hero:IsClone()) then return end
 
 	-- Abilities
 
