@@ -17,7 +17,6 @@ function Thinker:Minute00()
 	local tTowers = Entities:FindAllByClassname("npc_dota_tower")
 	for k, v in pairs(tTowers) do
 		local ability = v:AddAbility("deathtower")
-		ability:SetLevel(1)
 	end
 
 	print("The Game begins!")
