@@ -52,6 +52,7 @@ function deathtowermodifier:OnCreated( kv )
 	ability11:SetLevel(1)
 	
 	-- hp placeholder
+	self:GetAbility():SetLevel(1)
 	local maxHealth = tower:GetMaxHealth()
 	local maxHealthMultiplier = self:GetAbility():GetSpecialValueFor("tower_max_hp_multiplier")
 	print(maxHealth)
@@ -66,7 +67,6 @@ function deathtowermodifier:OnCreated( kv )
 	tower:AddItemByName("item_rapier")
 	tower:AddItemByName("item_heart")
 end
-
 
 function deathtowermodifier:DeclareFunctions()
 	return {
