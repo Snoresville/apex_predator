@@ -23,7 +23,7 @@ function apex_agility:DeclareFunctions()
 		MODIFIER_EVENT_ON_DEATH, -- OnDeath
 		MODIFIER_PROPERTY_TOOLTIP, -- OnTooltip
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS, -- Stat Bonus
-		
+		MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE,
 		-- https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools/Scripting/API#modifierfunction
 	}
 	return funcs
@@ -36,6 +36,9 @@ function apex_agility:GetModifierBonusStats_Agility()
 	return attribute * bonus
 end
 
+function apex_agility:GetModifierMoveSpeedBonus_Percentage()
+	return self:GetModifierBonusStats_Agility() * 0.05
+end
 
 
 -- passing a number to the Tooltip in resource/addon_english.txt 
