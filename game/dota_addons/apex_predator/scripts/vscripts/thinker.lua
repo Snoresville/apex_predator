@@ -12,6 +12,13 @@ ListenToGameEvent("game_rules_state_game_in_progress", function()
 end, GameMode)
 
 function Thinker:Minute00()
+	if IsClient() then return end
+	
+	local tTowers = Entities:FindAllByClassname("npc_dota_tower")
+	for k, v in pairs(tTowers) do
+		local ability = v:AddAbility("deathtower")
+	end
+
 	print("The Game begins!")
 	return nil -- does not repeat
 end
@@ -39,7 +46,7 @@ end
 function Thinker:Often()
 	-- print("every 5 minutes")
 	BUTTINGS.GOLD_PER_MINUTE = BUTTINGS.GOLD_PER_MINUTE * 2
-	GOLD_GAIN_PERCENTAGE = GOLD_GAIN_PERCENTAGE * 2
+	BUTTINGS.GOLD_GAIN_PERCENTAGE = BUTTINGS.GOLD_GAIN_PERCENTAGE * 2
 	GameRules:SetGoldTickTime( 60/(BUTTINGS.GOLD_PER_MINUTE) )
 	
 	
