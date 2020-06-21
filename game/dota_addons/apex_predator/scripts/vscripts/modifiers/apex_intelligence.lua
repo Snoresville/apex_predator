@@ -37,7 +37,7 @@ function apex_intelligence:GetModifierBonusStats_Intellect()
 end
 
 function apex_intelligence:GetModifierSpellAmplify_Percentage()
-	return self:GetModifierBonusStats_Intellect() * 0.1
+	return self:GetModifierBonusStats_Intellect() * 0.06
 end
 
 -- passing a number to the Tooltip in resource/addon_english.txt 

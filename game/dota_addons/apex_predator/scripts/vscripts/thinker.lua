@@ -38,6 +38,12 @@ end
 
 function Thinker:Often()
 	-- print("every 5 minutes")
+	BUTTINGS.GOLD_PER_MINUTE = BUTTINGS.GOLD_PER_MINUTE * 2
+	GOLD_GAIN_PERCENTAGE = GOLD_GAIN_PERCENTAGE * 2
+	GameRules:SetGoldTickTime( 60/(BUTTINGS.GOLD_PER_MINUTE) )
+	
+	
+	
 	return 5*60
 end
 
