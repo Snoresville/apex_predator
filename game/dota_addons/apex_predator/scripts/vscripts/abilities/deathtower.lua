@@ -53,11 +53,12 @@ function deathtowermodifier:OnCreated( kv )
 	
 	-- hp placeholder
 	local maxHealth = tower:GetMaxHealth()
-	tower:SetMaxHealth(maxHealth * 10)
-	tower:SetBaseMaxHealth(maxHealth * 10)
-	tower:SetHealth(maxHealth * 10)
-	tower:SetPhysicalArmorBaseValue(999)
-	tower:SetBaseMagicalResistanceValue(99)
+	local maxHealthMultiplier = self:GetAbility():GetSpecialValueFor("tower_max_hp_multiplier")
+	tower:SetMaxHealth(maxHealth * maxHealthMultiplier)
+	tower:SetBaseMaxHealth(maxHealth * maxHealthMultiplier)
+	tower:SetHealth(maxHealth * 1maxHealthMultiplier)
+	tower:SetPhysicalArmorBaseValue(self:GetAbility():GetSpecialValueFor("base_armor"))
+	tower:SetBaseMagicalResistanceValue(self:GetAbility():GetSpecialValueFor("base_magic_resist"))
 	
 	-- towers fed ggwp
 	tower:AddItemByName("item_rapier")
