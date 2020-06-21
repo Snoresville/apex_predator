@@ -1,3 +1,5 @@
+-- Code courtesy of Snoresville.
+-- originally used in dota_upgrades
 deathtower = class({})
 
 --               modifiername used below ,       filepath            , weird valve thing
@@ -27,6 +29,7 @@ function deathtowermodifier:OnCreated( kv )
 	
 	local tower = self:GetParent()
 	
+	-- all these abilities aaaaaAAAAAAAAAAA
 	local ability2 = tower:AddAbility("huskar_berserkers_blood")
 	local ability3 = tower:AddAbility("medusa_split_shot")
 	local ability4 = tower:AddAbility("spectre_dispersion")
@@ -37,6 +40,28 @@ function deathtowermodifier:OnCreated( kv )
 	local ability9 = tower:AddAbility("special_bonus_unique_ursa")
 	local ability10 = tower:AddAbility("slardar_bash")
 	local ability11 = tower:AddAbility("special_bonus_unique_faceless_void_4")
+	ability2:SetLevel(4)
+	ability3:SetLevel(4)
+	ability4:SetLevel(4)
+	ability5:SetLevel(4)
+	ability6:SetLevel(4)
+	ability7:SetLevel(1)
+	ability8:SetLevel(1)
+	ability9:SetLevel(1)
+	ability10:SetLevel(4)
+	ability11:SetLevel(1)
+	
+	-- hp placeholder
+	local maxHealth = tower:GetMaxHealth()
+	tower:SetMaxHealth(maxHealth * 10)
+	tower:SetBaseMaxHealth(maxHealth * 10)
+	tower:SetHealth(maxHealth * 10)
+	tower:SetPhysicalArmorBaseValue(999)
+	tower:SetBaseMagicalResistanceValue(99)
+	
+	-- towers fed ggwp
+	tower:AddItemByName("item_rapier")
+	tower:AddItemByName("item_heart")
 end
 
 
