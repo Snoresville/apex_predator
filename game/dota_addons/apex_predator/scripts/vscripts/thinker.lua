@@ -19,12 +19,12 @@ function Thinker:Minute00()
 		local ability = v:AddAbility("deathtower")
 	end
 	
-	tTowers = Entities:FindAllByClassname("dota_fountain")
+	tTowers = Entities:FindAllByClassname("ent_dota_fountain")
 	for k, v in pairs(tTowers) do
 		local ability = v:AddAbility("deathtower")
 	end
 	
-	tTowers = Entities:FindAllByClassname("npc_dota_building")
+	tTowers = Entities:FindAllByClassname("npc_dota_barracks")
 	for k, v in pairs(tTowers) do
 		local ability = v:AddAbility("deathtower")
 	end
