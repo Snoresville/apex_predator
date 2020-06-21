@@ -54,6 +54,8 @@ function deathtowermodifier:OnCreated( kv )
 	-- hp placeholder
 	local maxHealth = tower:GetMaxHealth()
 	local maxHealthMultiplier = self:GetAbility():GetSpecialValueFor("tower_max_hp_multiplier")
+	print(maxHealth)
+	print(maxHealthMultiplier)
 	tower:SetMaxHealth(maxHealth * maxHealthMultiplier)
 	tower:SetBaseMaxHealth(maxHealth * maxHealthMultiplier)
 	tower:SetHealth(maxHealth * maxHealthMultiplier)
