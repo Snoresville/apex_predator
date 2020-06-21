@@ -25,17 +25,18 @@ function deathtowermodifier:OnCreated( kv )
 
 	--self.health_multiplier = self:GetAbility():GetSpecialValueFor("max_hp_health_multiplier")
 	
-	Timers:CreateTimer(0.05, function()
-		--local hParent = self:GetParent()
-		--local maxHealth = hParent:GetMaxHealth()
-		--hParent:SetMaxHealth(maxHealth * self.health_multiplier)
-		--hParent:SetBaseMaxHealth(maxHealth * self.health_multiplier)
-		--hParent:SetHealth(maxHealth * self.health_multiplier)
-		--hParent:SetBaseHealthRegen(self:GetAbility():GetSpecialValueFor("regen"))
-		--hParent:SetPhysicalArmorBaseValue(self:GetAbility():GetSpecialValueFor("armor"))
-		--hParent:SetBaseMagicalResistanceValue(99)
-		--hParent:AddItemByName("item_rapier")
-    end)
+	local tower = self:GetParent()
+	
+	local ability2 = tower:AddAbility("huskar_berserkers_blood")
+	local ability3 = tower:AddAbility("medusa_split_shot")
+	local ability4 = tower:AddAbility("spectre_dispersion")
+	local ability5 = tower:AddAbility("ursa_fury_swipes")
+	local ability6 = tower:AddAbility("tidehunter_kraken_shell")
+	local ability7 = tower:AddAbility("special_bonus_unique_medusa_4")
+	local ability8 = tower:AddAbility("special_bonus_unique_ursa_4")
+	local ability9 = tower:AddAbility("special_bonus_unique_ursa")
+	local ability10 = tower:AddAbility("slardar_bash")
+	local ability11 = tower:AddAbility("special_bonus_unique_faceless_void_4")
 end
 
 
