@@ -18,6 +18,21 @@ function Thinker:Minute00()
 	for k, v in pairs(tTowers) do
 		local ability = v:AddAbility("deathtower")
 	end
+	
+	tTowers = Entities:FindAllByClassname("dota_fountain")
+	for k, v in pairs(tTowers) do
+		local ability = v:AddAbility("deathtower")
+	end
+	
+	tTowers = Entities:FindAllByClassname("npc_dota_building")
+	for k, v in pairs(tTowers) do
+		local ability = v:AddAbility("deathtower")
+	end
+	
+	tTowers = Entities:FindAllByClassname("npc_dota_fort")
+	for k, v in pairs(tTowers) do
+		local ability = v:AddAbility("deathtower")
+	end
 
 	print("The Game begins!")
 	return nil -- does not repeat
