@@ -56,7 +56,7 @@ function deathtowermodifier:OnCreated( kv )
 	local maxHealthMultiplier = self:GetAbility():GetSpecialValueFor("tower_max_hp_multiplier")
 	tower:SetMaxHealth(maxHealth * maxHealthMultiplier)
 	tower:SetBaseMaxHealth(maxHealth * maxHealthMultiplier)
-	tower:SetHealth(maxHealth * 1maxHealthMultiplier)
+	tower:SetHealth(maxHealth * maxHealthMultiplier)
 	tower:SetPhysicalArmorBaseValue(self:GetAbility():GetSpecialValueFor("base_armor"))
 	tower:SetBaseMagicalResistanceValue(self:GetAbility():GetSpecialValueFor("base_magic_resist"))
 	
