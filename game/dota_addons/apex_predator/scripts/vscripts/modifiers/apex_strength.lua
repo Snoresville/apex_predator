@@ -37,7 +37,7 @@ function apex_strength:GetModifierBonusStats_Strength()
 end
 
 function apex_strength:GetModifierMagicalResistanceBonus()
-	return math.min(self:GetModifierBonusStats_Strength() * 0.08 or 0, 99.99)
+	return math.min(self:GetModifierBonusStats_Strength() * 0.008 or 0, 99.99)
 end
 
 -- passing a number to the Tooltip in resource/addon_english.txt 
