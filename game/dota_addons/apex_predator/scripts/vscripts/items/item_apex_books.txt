@@ -41,7 +41,7 @@
             "01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stat_gain"			    "5"
+				"stat_gain"			    "10"
 			}
 		}
 	}
@@ -87,7 +87,7 @@
             "01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stat_gain"			    "5"
+				"stat_gain"			    "10"
 			}
 		}
 	}
@@ -133,7 +133,7 @@
             "01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stat_gain"			    "5"
+				"stat_gain"			    "10"
 			}
 		}
 	}

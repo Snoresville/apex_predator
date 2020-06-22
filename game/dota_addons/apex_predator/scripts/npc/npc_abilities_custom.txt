@@ -85,7 +85,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"base_armor"					"99"
+				"base_armor"					"25"
 			}
 			"04"
 			{
