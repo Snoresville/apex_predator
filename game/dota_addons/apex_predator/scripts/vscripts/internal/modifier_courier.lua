@@ -9,7 +9,7 @@ modifier_courier =  class({})
 
 function modifier_courier:IsPermanent() return true end
 function modifier_courier:RemoveOnDeath() return false end
--- function modifier_courier:IsHidden() return true end 	-- we can hide the modifier
+function modifier_courier:IsHidden() return true end 	-- we can hide the modifier
 function modifier_courier:IsDebuff() return false end 	-- make it red or green
 
 function modifier_courier:DeclareFunctions()
@@ -132,7 +132,7 @@ function modifier_courier:GetModifierMoveSpeedOverride()
 	-- print("GetMaxHealth",IsServer(),courier:GetMaxHealth())
 	local level = self:GetStackCount()
 	-- if self.updateHealth then self:updateHealth() end
-	return level * 10 + 270 
+	return level * 500 
 end
 -- function modifier_courier:GetModifierConstantRespawnTime()	return     end
 

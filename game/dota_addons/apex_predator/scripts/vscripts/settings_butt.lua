@@ -3,7 +3,7 @@ BUTTINGS = {
 
 	GAME_TITLE = WORKSHOP_TITLE,
 
-	GAME_MODE = "AP",                   -- "AR" "AP" All Random/ All Pick
+	GAME_MODE = "AR",                   -- "AR" "AP" All Random/ All Pick
 	ALLOW_SAME_HERO_SELECTION = 0,      -- 0 = everyone must pick a different hero, 1 = can pick same
 	HERO_BANNING = 1,                   -- 0 = no banning, 1 = banning phase
 	USE_BOTS = 0, -- TODO
@@ -14,18 +14,18 @@ BUTTINGS = {
 	COOLDOWN_PERCENTAGE = 100,          -- (default = 100) factor for all cooldowns
 	GOLD_GAIN_PERCENTAGE = 100,         -- (default = 100) factor for gold income
 	GOLD_PER_MINUTE = 90,               -- (default =  90) passive gold
-	RESPAWN_TIME_PERCENTAGE = 100,      -- (default = 100) factor for respawn time
+	RESPAWN_TIME_PERCENTAGE = 10,      -- (default = 100) factor for respawn time
 	XP_GAIN_PERCENTAGE = 100,           -- (default = 100) factor for xp income
 
 	TOMBSTONE = 0,                      -- 0 = normal, 1 = You spawn a tombstone when you die. Teammates can ressurect you by channeling it.
 	MAGIC_RES_CAP = 0,                  -- 0 = normal, 1 = Keeps Magic Resistance <100%
-	CLASSIC_ARMOR = 0,                  -- 0 = normal, 1 = Old armor formula (pre 7.20)
+	CLASSIC_ARMOR = 1,                  -- 0 = normal, 1 = Old armor formula (pre 7.20)
 	                                    -- set this to 1, if your game mode will feature high amounts of armor or agility
 	                                    -- otherwise the physical resistance can go to 100% making things immune to physical damage
 	
 	NO_UPHILL_MISS = 0,                 -- 0 = normal, 1 = 0% uphill muss chance
-	OUTPOST_SHOP = 0,                   -- 0 = normal, 1 = jungle shops
-	SIDE_SHOP = 0,                      -- 0 = normal, 1 = bring back sideshops
+	OUTPOST_SHOP = 1,                   -- 0 = normal, 1 = jungle shops
+	SIDE_SHOP = 1,                      -- 0 = normal, 1 = bring back sideshops
 	 FREE_COURIER = 1,                  -- 0 = buggy volvo, 1 = courier fix
 	XP_PER_MINUTE = 0,                  -- (normal dota = 0) everyone gets passive experience (like the passive gold)
 	COMEBACK_TIMER = 30,                -- timer (minutes) to start comeback XP / gold 
