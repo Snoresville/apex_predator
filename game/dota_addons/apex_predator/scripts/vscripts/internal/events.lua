@@ -11,8 +11,8 @@ ListenToGameEvent("game_rules_state_change", function()
 
 		
 		GameRules:GetGameModeEntity():SetCustomXPRequiredToReachNextLevel( BUTTINGS.ALTERNATIVE_XP_TABLE() )
-		GameRules:GetGameModeEntity():SetUseCustomHeroLevels(BUTTINGS.MAX_LEVEL~=25)
-		GameRules:SetUseCustomHeroXPValues(BUTTINGS.MAX_LEVEL~=25)
+		GameRules:GetGameModeEntity():SetUseCustomHeroLevels(true)
+		GameRules:SetUseCustomHeroXPValues(true)
 		GameRules:GetGameModeEntity():SetCustomHeroMaxLevel(BUTTINGS.MAX_LEVEL)
 
 		if ("AR"==BUTTINGS.GAME_MODE) then
@@ -31,19 +31,13 @@ ListenToGameEvent("game_rules_state_change", function()
 		end
 
 		if ( 1 == BUTTINGS.SIDE_SHOP ) then
-			for op,outpost in pairs(Butt:AllOutposts()) do
-				CreateUnitByNameAsync(
-					"ent_dota_shop",
-					outpost:GetAbsOrigin(),
-					true,  -- bFindClearSpace,
-					nil,
-					nil,
-					5,
-					function(shop)
-						shop:SetShopType(DOTA_SHOP_SIDE)
-					end
-				)
-				SpawnDOTAShopTriggerRadiusApproximate(outpost:GetAbsOrigin(),600):SetShopType(DOTA_SHOP_SIDE)
+			for _,pos in pairs(Butt:OldSideshopLocations()) do
+				Butt:CreateSideShop(pos)
+			end
+		end
+		if ( 1 == BUTTINGS.OUTPOST_SHOP ) then
+			for o,outpost in pairs(Butt:AllOutposts()) do
+				Butt:CreateSideShop(outpost:GetAbsOrigin())
 			end
 		end
 
@@ -86,9 +80,9 @@ ListenToGameEvent("entity_killed", function(keys)
 	if killedUnit:IsRealHero() and not killedUnit:IsTempestDouble() and not killedUnit:IsReincarnating() then
 
 		-- fix respawn lvl>25
-		if (killedUnit:GetLevel()>25) then
-			print(killedUnit,killedUnit:GetName(),4*killedUnit:GetLevel())
-			killedUnit:SetTimeUntilRespawn(4*killedUnit:GetLevel())
+		if (killedUnit:GetLevel()>1) then
+			print(killedUnit,killedUnit:GetName(),4*killedUnit:GetLevel() * BUTTINGS.RESPAWN_TIME_PERCENTAGE * 0.01)
+			killedUnit:SetTimeUntilRespawn(4 * killedUnit:GetLevel() * BUTTINGS.RESPAWN_TIME_PERCENTAGE * 0.01)
 		end
 
 		-- tombstone
