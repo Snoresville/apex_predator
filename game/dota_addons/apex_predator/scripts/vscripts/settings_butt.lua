@@ -75,7 +75,7 @@ function BUTTINGS.ALTERNATIVE_XP_TABLE()	-- xp values if MAX_LEVEL is different 
 		41395,
 		47895,
 		55395,
-	} for i = #ALTERNATIVE_XP_TABLE + 1, BUTTINGS.MAX_LEVEL do ALTERNATIVE_XP_TABLE[i] = ALTERNATIVE_XP_TABLE[i - 1] + (300 * ( i - 15 )) end
+	} for i = #ALTERNATIVE_XP_TABLE + 1, math.min(BUTTINGS.MAX_LEVEL, 100) do ALTERNATIVE_XP_TABLE[i] = ALTERNATIVE_XP_TABLE[i - 1] + (300 * ( i - 15 )) end
 	return ALTERNATIVE_XP_TABLE
 end
 

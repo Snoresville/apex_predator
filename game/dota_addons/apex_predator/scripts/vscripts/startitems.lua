@@ -26,12 +26,18 @@ local talents = {
 	-- [2] = "",	[1] = "special_bonus_exampletalent",
 }
 
+-- Attribute table for apex giving
+local attrib = {
+	"apex_agility",
+	"apex_strength",
+	"apex_intelligence",
+}
+
+-- General Hero Section
 ListenToGameEvent("npc_first_spawn",function(kv)
 	local hero = EntIndexToHScript(kv.entindex)
-
-
+	
 	if (not hero:IsHero()) then return end
-
 	-- Abilities
 
 	for abil,kv in pairs(bonusabilities) do
@@ -82,4 +88,36 @@ ListenToGameEvent("npc_first_spawn",function(kv)
 		end
 	end
 
+end, self)
+
+-- Function for handling other things
+ListenToGameEvent("npc_first_spawn",function(kv)
+	local unit = EntIndexToHScript(kv.entindex)
+	print(unit:GetClassname())
+	
+	-- Courier speed
+	--if unit:GetUnitName() == "npc_dota_courier" then unit:SetBaseMoveSpeed(2000) return end
+	
+	-- Illusions
+	if unit:IsIllusion() and unit:IsHero() then
+		local ownerID = unit:GetPlayerOwnerID()
+		local ownerHero = PlayerResource:GetSelectedHeroEntity(ownerID)
+		
+		-- Illusion stats
+		unit:SetBaseAgility(ownerHero:GetBaseAgility())
+		unit:SetBaseStrength(ownerHero:GetBaseStrength())
+		unit:SetBaseIntellect(ownerHero:GetBaseIntellect())
+		
+		-- apex giving time
+		for _,apexString in ipairs(attrib) do
+			local apex = ownerHero:FindModifierByName(apexString)
+			if apex then 
+				local modifier = unit:AddNewModifier(unit, nil, apexString, {})
+				unit:AddNewModifier(unit, nil, apexString .. "_base", {})
+				modifier:SetStackCount(apex:GetStackCount())
+			end
+		end
+		
+		return
+	end
 end, self)

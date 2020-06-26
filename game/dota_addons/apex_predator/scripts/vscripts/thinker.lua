@@ -11,27 +11,22 @@ ListenToGameEvent("game_rules_state_game_in_progress", function()
 		Timers:CreateTimer( Thinker.Seldom )
 end, GameMode)
 
+local buildings = {
+	"npc_dota_tower",
+	"ent_dota_fountain",
+	"npc_dota_barracks",
+	"npc_dota_fort",
+	"npc_dota_filler",
+}
+
 function Thinker:Minute00()
 	if IsClient() then return end
 	
-	local tTowers = Entities:FindAllByClassname("npc_dota_tower")
-	for k, v in pairs(tTowers) do
-		local ability = v:AddAbility("deathtower")
-	end
-	
-	tTowers = Entities:FindAllByClassname("ent_dota_fountain")
-	for k, v in pairs(tTowers) do
-		local ability = v:AddAbility("deathtower")
-	end
-	
-	tTowers = Entities:FindAllByClassname("npc_dota_barracks")
-	for k, v in pairs(tTowers) do
-		local ability = v:AddAbility("deathtower")
-	end
-	
-	tTowers = Entities:FindAllByClassname("npc_dota_fort")
-	for k, v in pairs(tTowers) do
-		local ability = v:AddAbility("deathtower")
+	for _,towerName in ipairs(buildings) do
+		local tTowers = Entities:FindAllByClassname(towerName)
+		for k, v in pairs(tTowers) do
+			v:AddAbility("deathtower")
+		end
 	end
 
 	print("The Game begins!")

@@ -80,12 +80,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"tower_max_hp_multiplier"					"5"
+				"tower_max_hp_multiplier"					"10"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"base_armor"					"25"
+				"base_armor"					"75"
 			}
 			"04"
 			{

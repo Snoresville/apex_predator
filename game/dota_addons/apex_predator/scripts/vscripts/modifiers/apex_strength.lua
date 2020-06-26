@@ -58,6 +58,9 @@ function apex_strength:OnDeath(event)
 		print("Unit that triggered event", event.unit:GetUnitName())
 		--]]
 		
+		-- who would have thought that illusions can give you stacks
+		if event.unit:IsIllusion() then return end
+		
 		-- Test for hero kills
 		if event.unit:IsRealHero() or event.unit:IsBuilding() or event.unit:GetUnitName() == "npc_dota_roshan" then self:SetStackCount(self:GetStackCount() + 10) 
 		else self:SetStackCount(self:GetStackCount() + 1) 
