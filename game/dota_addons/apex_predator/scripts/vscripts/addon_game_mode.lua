@@ -57,15 +57,6 @@ function Activate()
 	FireGameEvent("addon_game_mode_activate",nil)
 	-- GameRules.GameMode = GameMode()
 	-- FireGameEvent("init_game_mode",{})
-	
-	-- team size
-	if GetMapName() == "dota" then
-		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, 5)
-		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, 5)
-	elseif GetMapName() == "dota_10v10" then
-		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, 10)
-		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, 10)
-	end
 end
 
 ListenToGameEvent("addon_game_mode_activate", function()
