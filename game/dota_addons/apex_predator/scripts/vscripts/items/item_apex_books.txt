@@ -18,7 +18,7 @@
 			"soundfile"	"soundevents/game_sounds_items.vsndevts"
 		}
 
-		"ItemCost"						"7500"
+		"ItemCost"						"10000"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
         "ItemStackable"					"1"
@@ -64,7 +64,7 @@
 			"soundfile"	"soundevents/game_sounds_items.vsndevts"
 		}
 
-		"ItemCost"						"7500"
+		"ItemCost"						"10000"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
         "ItemStackable"					"1"
@@ -110,7 +110,7 @@
 			"soundfile"	"soundevents/game_sounds_items.vsndevts"
 		}
 
-		"ItemCost"						"7500"
+		"ItemCost"						"10000"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
         "ItemStackable"					"1"

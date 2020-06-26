@@ -132,7 +132,7 @@ function modifier_courier:GetModifierMoveSpeedOverride()
 	-- print("GetMaxHealth",IsServer(),courier:GetMaxHealth())
 	local level = self:GetStackCount()
 	-- if self.updateHealth then self:updateHealth() end
-	return level * 500 
+	return level * 250 
 end
 -- function modifier_courier:GetModifierConstantRespawnTime()	return     end
 
