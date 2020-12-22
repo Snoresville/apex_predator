@@ -5,7 +5,7 @@ apex_intelligence = apex_intelligence or class({})
 -- The modifier Tooltip is inside resource/addon_english.txt (Have fun playing)
 
 function apex_intelligence:GetTexture() return "apex_intelligence_icon" end -- get the icon from a different ability
-
+function apex_intelligence:AllowIllusionDuplicate() return true end
 function apex_intelligence:IsPermanent() return true end
 function apex_intelligence:RemoveOnDeath() return false end
 function apex_intelligence:IsHidden() return false end 	-- we can hide the modifier

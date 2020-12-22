@@ -5,7 +5,7 @@ apex_strength_base = apex_strength_base or class({})
 -- The modifier Tooltip is inside resource/addon_english.txt (Have fun playing)
 
 function apex_strength_base:GetTexture() return "apex_strength_icon" end -- get the icon from a different ability
-
+function apex_strength_base:AllowIllusionDuplicate() return true end
 function apex_strength_base:IsPermanent() return true end
 function apex_strength_base:RemoveOnDeath() return false end
 function apex_strength_base:IsHidden() return true end 	-- we can hide the modifier

@@ -108,16 +108,6 @@ ListenToGameEvent("npc_first_spawn",function(kv)
 		unit:SetBaseStrength(ownerHero:GetBaseStrength())
 		unit:SetBaseIntellect(ownerHero:GetBaseIntellect())
 		
-		-- apex giving time
-		for _,apexString in ipairs(attrib) do
-			local apex = ownerHero:FindModifierByName(apexString)
-			if apex then 
-				local modifier = unit:AddNewModifier(unit, nil, apexString, {})
-				unit:AddNewModifier(unit, nil, apexString .. "_base", {})
-				modifier:SetStackCount(apex:GetStackCount())
-			end
-		end
-		
 		return
 	end
 end, self)

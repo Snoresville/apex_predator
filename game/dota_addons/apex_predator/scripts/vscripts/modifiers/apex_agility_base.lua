@@ -5,7 +5,7 @@ apex_agility_base = apex_agility_base or class({})
 -- The modifier Tooltip is inside resource/addon_english.txt (Have fun playing)
 
 function apex_agility_base:GetTexture() return "apex_agility_icon" end -- get the icon from a different ability
-
+function apex_agility_base:AllowIllusionDuplicate() return true end
 function apex_agility_base:IsPermanent() return true end
 function apex_agility_base:RemoveOnDeath() return false end
 function apex_agility_base:IsHidden() return true end 	-- we can hide the modifier
